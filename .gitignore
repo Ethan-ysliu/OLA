@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.eggs/
+build/
+dist/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Heavy artifacts (not part of the open-source core)
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+outputs/
+checkpoints/
+.cache/
+data/

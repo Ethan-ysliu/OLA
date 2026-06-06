@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ola"
+version = "0.1.0"
+description = "Ordinal Lens Alignment (OLA): frozen-backbone, inference-time ordinal alignment for multimodal LLMs."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+keywords = ["ordinal-regression", "multimodal-llm", "inference-time", "logit-lens", "interpretability"]
+dependencies = [
+    "torch>=2.0",
+    "numpy>=1.21",
+]
+
+[project.optional-dependencies]
+# Real transformers.generate() integration for the online processor.
+hf = ["transformers>=4.40"]
+# Run the synthetic smoke test / invariants test.
+dev = ["pytest>=7.0"]
+
+[tool.setuptools]
+packages = ["ola"]
